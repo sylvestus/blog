@@ -1,0 +1,25 @@
+{% macro displayBlogs(myblogslist)%}
+{% for Blogs in mybloglist[::-1] %}
+
+
+<div class=" col-lg-6 movie-card"style="height: 500px;">
+    <div class="card col-sm mt-2"style="height: 500px;">
+        <div class="well  p-3" style="text-align: left;">
+            <h3 style="font-weight: 500; ">Blog title {{Blog.title}}</h3>
+            <hr>
+            <h3 style="font-weight: 500; ">The blog{{Blog.blog}}</h3>
+            <hr>
+            <p style="font-weight: 500; "><span >Posted by :
+                <h3 style="font-weight: 500; ">{{Blog.current_user}}</h3>
+                <hr>
+                   <h3>{{Blog.Posted_on.strftime('%Y-%m-%d')}}</h3> 
+                </span> 
+            </p>
+
+            <a href="{{url_for('main.comments')}}" class="btn btn-primary btn" style="font-size: 18px;">Comment</a>
+        </div>
+    </div>
+</div>
+
+
+{%endfor%}{% endmacro%}
