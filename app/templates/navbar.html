@@ -1,0 +1,18 @@
+<div class="navbar-collapse collapse" style="background-color: rgb(59, 45, 45);">
+    <ul class="nav navbar-nav">
+        
+        <a class="navbar-brand" href="/"> Home </a>
+            <a class="navbar-brand" href="/"> Pitches </a>
+            <a class="navbar-brand" href="/"> Categories </a>
+            <a class="navbar-brand" href="/"> Create New pitch</a>
+
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        {% if current_user.is_authenticated %}
+        <li {{current_user.username}}</li>
+        <a href="{{url_for('auth.logout')}}">Sign out</a>
+        {% else %}
+        <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
+        {%endif%}
+      </ul>
+</div>
