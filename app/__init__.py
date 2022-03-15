@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_sqlalchemy import SQLAlchemy
 from flask_simplemde import SimpleMDE
+import os
 
 
 login_manager = LoginManager()
@@ -18,11 +19,16 @@ simple = SimpleMDE()
 
 def create_app(config_name):
     app = Flask(__name__)
+    
 
      # Creating the app configurations
-    app.config.from_object(config_options[config_name])
+    # app.config.from_object(config_options[config_name])
     # app.config['SQLALCHEMY_DATABASE_URI'] ='postgresql+psycopg2://moringa:silvano36@localhost/blog_site'
     
+     
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.ge("DATABASE_URL")
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 
 
