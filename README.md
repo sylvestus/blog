@@ -1,4 +1,4 @@
-# PITCHES APP
+# Blog site
 ## Author
 [**sylvestus sigei**](https://github.com/sylvestus)
 ## Description
