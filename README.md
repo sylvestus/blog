@@ -28,10 +28,10 @@ Then follow the following 2 steps:
 * **2** : Open the terminal, go to the project directory and run the following commands: **`chmod +x start.sh`** and **`./start.sh`** each one at a time to launch the program.
 ## User Stories
 The user is able to;
-* See various pitch categories on the homepage
-* Select a a pitch category an read what other people has pitched and comment or vote on them
-* See the  description of the pitch 
-* Click on login or sign up and recieve email on the sighn up
+* create an account login See various blogs
+* comment on the blogs
+* See the delete the blogs 
+* delete bad reviews
 ## Known Bugs
 * No known bugs. Please contact me if you experience any.
 ## Support and Contact Details
